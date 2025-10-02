@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://booklinkagency.github.io/booklinkagency/sitemap.xml
