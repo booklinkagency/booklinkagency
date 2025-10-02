@@ -78,3 +78,5 @@ footer{padding:3rem 0;background:var(--bg2);text-align:center;font-size:.875rem;
 @media (max-width:400px){
   html{font-size:14px}
 }
+/* ---------- LOGO PNG SIZE ---------- */
+.logo img{height:40px;width:auto}   /* change 40px to whatever fits */
