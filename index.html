@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <!-- ========== BASIC ========== -->
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- ========== PAGE-SPECIFIC ========== -->
   <title>BookLink Agency | Influencer Marketing for Authors – Get Your Book Posted by TikTok & Instagram Creators</title>
   <meta name="description" content="Book promotion service that connects authors with TikTok & Instagram book influencers. Choose who posts, boost sales, hit algorithms. No hidden fees. Start at $250.">
   <meta name="keywords" content="book promotion service, influencer marketing for authors, TikTok book influencers, Instagram book promotion, BookTok marketing, book marketing agency, get book featured on TikTok, author influencer match, book promo packages, how to make book go viral">
 
-  <!-- ========== CANONICAL (point to your real domain) ========== -->
   <link rel="canonical" href="https://booklinkagency.github.io/booklinkagency/">
 
-  <!-- ========== OPEN-GRAPH (Facebook, LinkedIn, Discord) ========== -->
+  <!-- Open-Graph -->
   <meta property="og:title" content="BookLink Agency | Influencer Marketing for Authors">
-  <meta property="og:description" content="While you read this, 12 more readers bought someone else’s book. We fix that.">
+  <meta property="og:description" content="While you read this, 12 more readers bought someone else’s book.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://booklinkagency.github.io/booklinkagency/">
   <meta property="og:image" content="https://booklinkagency.github.io/booklinkagency/og-image.jpg">
@@ -24,18 +21,18 @@
   <meta property="og:site_name" content="BookLink Agency">
   <meta property="og:locale" content="en_US">
 
-  <!-- ========== TWITTER-CARD ========== -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BookLink Agency | Influencer Marketing for Authors">
-  <meta name="twitter:description" content="While you read this, 12 more readers bought someone else’s book. We fix that.">
+  <meta name="twitter:description" content="While you read this, 12 more readers bought someone else’s book.">
   <meta name="twitter:image" content="https://booklinkagency.github.io/booklinkagency/og-image.jpg">
   <meta name="twitter:image:alt" content="BookLink Agency – Gatekeepers to Viral Books">
 
-  <!-- ========== FAVICON (inline base64, no extra file) ========== -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232563eb'/%3E%3Ctext x='50' y='50' font-size='70' fill='white' font-family='Arial' font-weight='bold' text-anchor='middle' dominant-baseline='middle'%3EB%3C/text%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==">
 
-  <!-- ========== JSON-LD RICH-SNIPPET ========== -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,28 +75,32 @@
   }
   </script>
 
-  <!-- ========== ROBOTS & INDEXING ========== -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
 
-  <!-- ========== PRELOAD HERO VIDEO (speed) ========== -->
   <link rel="preload" as="video" href="my2.mp4" type="video/mp4">
 
-  <!-- ========== FONTS ========== -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header id="header">
     <div class="nav">
       <a class="logo" href="BLA">
-  <img src="logo.png" alt="BookLink Agency Logo">
+        <img src="logo.png" alt="BookLink Agency Logo">
       </a>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
     </div>
+
     <nav class="mobile-nav" id="mobileNav">
       <ul>
         <li><a href="#services">Services</a></li>
@@ -111,7 +112,6 @@
   </header>
 
   <section id="hero">
-    <!-- watermark-free video -->
     <video class="hero-vid" autoplay muted loop playsinline poster="my2.mp4">
       <source src="my2.mp4" type="video/mp4">
     </video>
@@ -148,7 +148,7 @@
   <section id="why" class="section container">
     <h2 class="text-center">Why This Matters (Dark Truth)</h2>
     <img class="why-img" src="make.png" alt="Invisible books">
-    <ul style="margin-top:2rem;max-width:680px;margin-inline:auto;list-style:disc;padding-left:1.2rem">
+    <ul class="why-list">
       <li>Amazon’s algo forgets books that don’t move <strong>daily units</strong> — you drop 10 000 ranks overnight.</li>
       <li>93 % of authors never hit 100 reviews — because <strong>no one sees the book</strong>.</li>
       <li>Influencers need new content daily. If it’s not your book, it’s your competitor’s.</li>
@@ -162,9 +162,10 @@
       <label for="range">Slide to your budget:</label>
       <input type="range" id="range" min="0" max="4" step="1" value="0">
       <div class="price-display" id="priceDisplay">$250</div>
-      <p id="customBox" style="display:none">Custom budget? Tell us below.</p>
+      <p id="customBox" class="hidden">Custom budget? Tell us below.</p>
     </div>
-    <div class="grid cards" style="margin-top:3rem">
+
+    <div class="grid cards price-cards">
       <div class="card"><h3>Bronze</h3><p>1 micro post • $250</p></div>
       <div class="card"><h3>Silver</h3><p>2 posts + story • $500</p></div>
       <div class="card"><h3>Gold</h3><p>Bundle 3 influencers • $750</p></div>
@@ -175,7 +176,7 @@
   <section id="contact" class="section container">
     <h2 class="text-center">Lock Your Slot</h2>
     <form id="contactForm" action="https://formspree.io/f/xwkgzwqe" method="POST">
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+      <div class="form-grid">
         <div class="form-group">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" required>
@@ -193,16 +194,19 @@
           <input type="text" id="influencer" name="influencer" placeholder="@handle or niche">
         </div>
       </div>
+
       <div class="form-group">
         <label for="budget">Budget *</label>
         <input type="text" id="budgetInput" name="budget" required readonly>
       </div>
+
       <div class="form-group">
         <label for="message">Message *</label>
         <textarea id="message" name="message" rows="4" required></textarea>
       </div>
+
       <button type="submit" class="btn btn-primary">Submit Before Timer Hits Zero</button>
-      <p id="formStatus" class="text-center" style="margin-top:1rem;color:var(--danger);font-weight:600"></p>
+      <p id="formStatus" class="form-status"></p>
     </form>
   </section>
 
@@ -213,83 +217,98 @@
   </footer>
 
   <script>
-    /* theme auto + manual */
-    const prefersLight=window.matchMedia('(prefers-color-scheme: light)');
-    function setTheme(light){
-      document.documentElement.setAttribute('data-theme',light?'light':'dark');
+    /* ---------- theme ---------- */
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)');
+    function setTheme(light) {
+      document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
     }
     setTheme(prefersLight.matches);
-    prefersLight.addEventListener('change',e=>setTheme(e.matches));
-    document.getElementById('themeToggle').addEventListener('click',()=>{
-      const current=document.documentElement.getAttribute('data-theme');
-      const next=current==='dark'?'light':'dark';
-      document.documentElement.setAttribute('data-theme',next);
+    prefersLight.addEventListener('change', e => setTheme(e.matches));
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
     });
 
-    /* nav scroll */
-    window.addEventListener('scroll',()=>{
-      document.getElementById('header').classList.toggle('scrolled',window.scrollY>40);
+    /* ---------- nav scroll ---------- */
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    /* mobile nav */
-    document.getElementById('hamburger').addEventListener('click',()=>{
+    /* ---------- mobile nav ---------- */
+    document.getElementById('hamburger').addEventListener('click', () => {
       document.getElementById('mobileNav').classList.toggle('active');
     });
 
-    /* countdown */
-    let time=24*60;
-    const timerEl=document.getElementById('timer');
-    setInterval(()=>{
-      const m=String(Math.floor(time/60)).padStart(2,'0'),s=String(time%60).padStart(2,'0');
-      timerEl.textContent=`${m}:${s}`;if(time>0)time--;
-    },1000);
+    /* ---------- countdown ---------- */
+    let time = 24 * 60;
+    const timerEl = document.getElementById('timer');
+    setInterval(() => {
+      const m = String(Math.floor(time / 60)).padStart(2, '0'),
+            s = String(time % 60).padStart(2, '0');
+      timerEl.textContent = `${m}:${s}`;
+      if (time > 0) time--;
+    }, 1000);
 
-    /* typing erase loop */
-    const lines=[
+    /* ---------- typing loop ---------- */
+    const lines = [
       "While you read this, 12 more readers bought someone else’s book.",
       "Influencers are hungry — but they don’t know you exist.",
       "Your book is 1 in 4 million. Without leverage, it dies."
     ];
-    let lineIndex=0,letterIndex=0,erase=false;
-    const typedEl=document.getElementById('typed');
-    function typeErase(){
-      const current=lines[lineIndex];
-      if(!erase && letterIndex<=current.length){
-        typedEl.textContent=current.slice(0,letterIndex++);
-      }else if(!erase && letterIndex>current.length){
-        setTimeout(()=>erase=true,1500);
-      }else if(erase && letterIndex>=0){
-        typedEl.textContent=current.slice(0,letterIndex--);
-      }else if(erase && letterIndex<0){
-        erase=false;lineIndex=(lineIndex+1)%lines.length;
+    let lineIndex = 0, letterIndex = 0, erase = false;
+    const typedEl = document.getElementById('typed');
+    function typeErase() {
+      const current = lines[lineIndex];
+      if (!erase && letterIndex <= current.length) {
+        typedEl.textContent = current.slice(0, letterIndex++);
+      } else if (!erase && letterIndex > current.length) {
+        setTimeout(() => erase = true, 1500);
+      } else if (erase && letterIndex >= 0) {
+        typedEl.textContent = current.slice(0, letterIndex--);
+      } else if (erase && letterIndex < 0) {
+        erase = false; lineIndex = (lineIndex + 1) % lines.length;
       }
-      setTimeout(typeErase,erase?30:50);
+      setTimeout(typeErase, erase ? 30 : 50);
     }
     typeErase();
 
-    /* pricing slider */
-    const range=document.getElementById('range'),priceDisplay=document.getElementById('priceDisplay'),budgetInput=document.getElementById('budgetInput'),customBox=document.getElementById('customBox');
-    const prices=['$250','$500','$750','$1000','Custom'];
-    range.addEventListener('input',()=>{
-      const v=range.value;priceDisplay.textContent=prices[v];budgetInput.value=prices[v];
-      customBox.style.display=v==4?'block':'none';
+    /* ---------- pricing slider ---------- */
+    const range = document.getElementById('range'),
+          priceDisplay = document.getElementById('priceDisplay'),
+          budgetInput = document.getElementById('budgetInput'),
+          customBox = document.getElementById('customBox');
+    const prices = ['$250', '$500', '$750', '$1000', 'Custom'];
+    range.addEventListener('input', () => {
+      const v = range.value;
+      priceDisplay.textContent = prices[v];
+      budgetInput.value = prices[v];
+      customBox.classList.toggle('hidden', v !== '4');
     });
-    budgetInput.value=prices[0];
+    budgetInput.value = prices[0];
 
-    /* form */
-    const form=document.getElementById('contactForm'),status=document.getElementById('formStatus');
-    form.addEventListener('submit',async(e)=>{
-      e.preventDefault();status.textContent='Sending…';
-      try{
-        const res=await fetch(form.action,{method:form.method,body:new FormData(form),headers:{Accept:'application/json'}});
-        if(res.ok){status.textContent='Slot locked. We’ll email you in 30 min.';form.reset();}
-        else throw new Error();
-      }catch{status.textContent='Error. Email us directly: booklinkagency@gmail.com';}
+    /* ---------- form ---------- */
+    const form = document.getElementById('contactForm'),
+          status = document.getElementById('formStatus');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          status.textContent = 'Slot locked. We’ll email you in 30 min.';
+          form.reset();
+        } else throw new Error();
+      } catch {
+        status.textContent = 'Error. Email us directly: booklinkagency@gmail.com';
+      }
     });
 
-    /* year */
-    document.getElementById('yr').textContent=new Date().getFullYear();
+    /* ---------- year ---------- */
+    document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
