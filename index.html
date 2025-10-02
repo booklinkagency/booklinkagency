@@ -89,58 +89,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-    /* Responsive nav */
-@media (max-width: 768px) {
-  /* Hide normal nav links on small screens */
-  .nav ul {
-    display: none;
-  }
-
-  /* Show hamburger */
-  .hamburger {
-    display: block;
-  }
-
-  /* Mobile nav (slide-in) */
-  .mobile-nav {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    width: 70%;
-    max-width: 300px;
-    height: 100vh;
-    background: var(--bg, #fff);
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-    transition: right 0.3s ease-in-out;
-    padding: 2rem;
-  }
-
-  .mobile-nav.active {
-    right: 0;
-  }
-
-  .mobile-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .mobile-nav ul li a {
-    font-size: 1.2rem;
-  }
-}
-
-/* On larger screens, hide hamburger + mobile nav */
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
-  .mobile-nav {
-    display: none;
-  }
-}
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header id="header">
@@ -343,3 +292,4 @@
   </script>
 </body>
 </html>
+
