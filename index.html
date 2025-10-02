@@ -217,28 +217,45 @@
   </footer>
 
   <script>
-    /* ---------- theme ---------- */
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)');
-    function setTheme(light) {
-      document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
-    }
-    setTheme(prefersLight.matches);
-    prefersLight.addEventListener('change', e => setTheme(e.matches));
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-    });
+    /* ---------- THEME + NAV (consolidated) ---------- */
+const root = document.documentElement;
+const prefersLight = window.matchMedia('(prefers-color-scheme: light');
 
-    /* ---------- nav scroll ---------- */
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 40);
-    });
+/* auto theme on load */
+function applySystem() { root.setAttribute('data-theme', prefersLight.matches ? 'light' : 'dark'); }
+applySystem();
+prefersLight.addEventListener('change', applySystem);
 
-    /* ---------- mobile nav ---------- */
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.toggle('active');
-    });
+/* manual toggle */
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+  localStorage.setItem('userTheme', current === 'dark' ? 'light' : 'dark');
+});
 
+/* remember user choice after reload */
+const saved = localStorage.getItem('userTheme');
+if (saved) root.setAttribute('data-theme', saved);
+
+/* ---------- header shadow on scroll ---------- */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+
+/* ---------- hamburger open / close ---------- */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileNav.classList.toggle('active');
+});
+
+/* close menu when a link inside is tapped */
+mobileNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileNav.classList.remove('active');
+  });
+});
     /* ---------- countdown ---------- */
     let time = 24 * 60;
     const timerEl = document.getElementById('timer');
@@ -312,3 +329,4 @@
   </script>
 </body>
 </html>
+
